@@ -61,4 +61,4 @@ MIT
 
 ---
 
-Built for Xiaomi MiMo 100T Challenge
+**Powered by Xiaomi MiMo V2.5**
