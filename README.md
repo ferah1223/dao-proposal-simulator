@@ -58,3 +58,7 @@ The UI follows a civic-tech design language with:
 ## License
 
 MIT
+
+---
+
+Built for Xiaomi MiMo 100T Challenge
