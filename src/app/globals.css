@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #111827;
+  --color-secondary: #6B7280;
+  --color-tertiary: #2563EB;
+  --color-success: #059669;
+  --color-danger: #DC2626;
+  --color-abstain: #8B5CF6;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #F9FAFB;
+  color: #111827;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.simulate-panel {
+  background-color: #F3F4F6;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.vote-bar-animate {
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes pulse-bar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.skeleton {
+  animation: pulse-bar 1.5s ease-in-out infinite;
+  background: linear-gradient(90deg, #F3F4F6 25%, #E5E7EB 50%, #F3F4F6 75%);
+  background-size: 200% 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vote-bar-animate,
+  .animate-fade-in {
+    transition: none;
+    animation: none;
+  }
+}
